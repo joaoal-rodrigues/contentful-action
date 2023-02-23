@@ -229,7 +229,7 @@ export const getEnvironment = async (
     environmentType === CONTENTFUL_ALIAS
       ? getNameFromPattern(MASTER_PATTERN)
       : getNameFromPattern(FEATURE_PATTERN, {
-          branchName: branchNames.headRef,
+          branchName: branchNames.baseRef,
         });
   Logger.info(`environmentId: "${environmentId}"`);
 
